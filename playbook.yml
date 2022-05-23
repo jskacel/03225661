@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+  - set_fact:
+      nejaka_promenna: dobra
+    delegate_to: 192.168.100.18
