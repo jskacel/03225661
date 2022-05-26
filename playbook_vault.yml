@@ -6,6 +6,7 @@
   - debug:
       msg: "{{ ansible_user }}"
     delegate_to: 192.168.100.18
+    delegate_facts: true
 
   - set_fact:
       nejaka_promenna: dobra
