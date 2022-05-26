@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- hosts: localhost
+  connection: local
   gather_facts: false
   tasks:
   - debug:
@@ -10,4 +11,4 @@
   - set_fact:
       nejaka_promenna: dobra
     delegate_to: 192.168.100.18
- #   delegate_facts: True
+    delegate_facts: True
