@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+  - debug:
+      var: testvariable
+    delegate_to: 192.168.100.18
+
+- hosts: 192.168.100.18
+  tasks:
+  - debug:
+      var: testvariable
