@@ -3,6 +3,9 @@
   connection: local
   gather_facts: false
   tasks:
+  - debug:
+      msg: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=secret/data/password:vault_ansible_user token=hvs.V5PRDlfhFyKzj7mhhufUrRfi url=http://192.168.100.18:8200') }}"
+
   - set_fact:
       nejaka_promenna: dobra
     delegate_to: 192.168.100.18
