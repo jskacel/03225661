@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+  - debug:
+      msg: "{{ ansible_user }}"
+    delegate_to: 192.168.100.18
+
+  - set_fact:
+      nejaka_promenna: dobra
+    delegate_to: 192.168.100.18
+    #delegate_facts: True
