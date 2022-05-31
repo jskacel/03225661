@@ -5,8 +5,9 @@
 
     - name: "List all known variables and facts"
       debug:
-        var: hostvars[inventory_hostname]
-  
+        msg: >-
+            {{ lookup('hashi_vault', 'secret=secret/data/{{ vault_namespace_domain }}/{{ vault_instance_name }}:data')['userpwd'] }}
+
     - set_fact:
         nejaka_promenna: dobra
       delegate_to: 16.170.146.116
