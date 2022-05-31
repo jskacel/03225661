@@ -9,7 +9,7 @@
     - name: "List all known variables and facts"
       debug:
         msg: >-
-            {{ lookup('hashi_vault', "secret=secret/data/{{ vault_namespace_domain }}/{{ vault_instance_name }}:data)[userpwd] token=hvs.V5PRDlfhFyKzj7mhhufUrRfi url=http://192.168.100.18:8200" }}
+            {{ lookup('hashi_vault', "secret=secret/data/{{ vault_namespace_domain }}/{{ vault_instance_name }}:data) token=hvs.V5PRDlfhFyKzj7mhhufUrRfi url=http://192.168.100.18:8200" }}
 
     - set_fact:
         nejaka_promenna: dobra
