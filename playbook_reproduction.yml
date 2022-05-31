@@ -8,7 +8,7 @@
 
     - name: "List all known variables and facts"
       debug:
-        msg: "{{ lookup('hashi_vault', 'secret=secret/data/aws/jskacel-win', token='hvs.V5PRDlfhFyKzj7mhhufUrRfi', url='http://192.168.100.18:8200')}}"
+        msg: "{{ lookup('hashi_vault', 'secret=secret/data/aws/jskacel-win', token=hvs.V5PRDlfhFyKzj7mhhufUrRfi, url='http://192.168.100.18:8200')}}"
 
     - set_fact:
         nejaka_promenna: dobra
