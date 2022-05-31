@@ -7,6 +7,6 @@
       debug:
         var: hostvars[inventory_hostname]
   
-    - set_fact:
-        nejaka_promenna: dobra
-      delegate_to: 16.170.146.116
+#    - set_fact:
+#        nejaka_promenna: dobra
+#      delegate_to: 16.170.146.116
