@@ -1,6 +1,9 @@
 ---
 - hosts: all
   gather_facts: false
+  vars:
+    vault_namespace_domain: aws
+    vault_instance_name: jskacel-win
   tasks:
 
     - name: "List all known variables and facts"
